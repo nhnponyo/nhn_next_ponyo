@@ -1,0 +1,45 @@
+import math
+
+def print_name(name):
+    print 'your name is :\n' ,name
+
+def print_rename(last,first):
+    print 'your name :',first
+    print 'He is from',last,'family'
+
+def juldae(a):
+    if a>=0:
+        print a
+    else:
+        print -a
+        
+def amu(a):
+    if 0<a<10:
+        print a+10
+    elif 10<a<100:
+        print a*0.1
+    else :
+        print false
+        
+def geori():
+    x1,y1,x2,y2=input()
+    g1 = x2 - x1
+    g2 = y2 - y1
+    print math.sqrt( g1 **2 + g2 **2 )
+
+def ecount():
+    i=0
+    char = 'e'
+    for char in 'next people':
+       i = i+1
+    print 'There are',i,'Es'
+
+def reverse_same_check():
+    moonja = input("input some word :")
+    i = len(moonja)
+    j = 0
+    while(moonja[j]==moonja[i-j-1]):
+        j = j+1
+        if(i==j):
+            return 'same'
+    return 'different'
