@@ -16,10 +16,13 @@ def get_inserted_money (my_money_dict) :
 		inserted_money = raw_input('\n돈을 넣으세요(입금을 마치려면 엔터) : ')
 		
 		#엔터치면 돈 투입 끝으로 간주하고 while loop를 종료한다
+		#이후 거스름돈 반환 문제를 해결하고 항시 돈을 넣을 수 있도록 했으므로 입금되지 않아도 프로그램은 반복적으로 실행된다.
 		if not inserted_money:
 			break
+			
 		#입력 데이터를 숫자형으로 형변환 (왜냐면 $raw_input()은 숫자입력도 문자열로 입력을 받기때문)
 		inserted_money = int(inserted_money)
+		
 		# 입력받은 돈이 100, 500, 1000, 5000 이 아니면 제대로 하라고 메세지를 띄운다
 		if inserted_money not in my_money_dict:
 			print "100원, 500원, 1000원, 5000원만 투입하세요"
